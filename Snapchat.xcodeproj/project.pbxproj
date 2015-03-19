@@ -27,6 +27,7 @@
 		771FDBF01AB9CBA8006FFE5B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771FDBEF1AB9CBA8006FFE5B /* SystemConfiguration.framework */; };
 		771FDBF21AB9CBAF006FFE5B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 771FDBF11AB9CBAF006FFE5B /* libz.dylib */; };
 		771FDBF41AB9CBB8006FFE5B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 771FDBF31AB9CBB8006FFE5B /* libsqlite3.dylib */; };
+		777660531ABA55E8004E1C64 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777660521ABA55E8004E1C64 /* UserTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		771FDBEF1AB9CBA8006FFE5B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		771FDBF11AB9CBAF006FFE5B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		771FDBF31AB9CBB8006FFE5B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		777660521ABA55E8004E1C64 /* UserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserTableViewController.swift; path = ../UserTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				771FDBDB1AB9CAC0006FFE5B /* ParseFacebookUtils.framework */,
 				771FDBB61AB9C8FD006FFE5B /* AppDelegate.swift */,
 				771FDBB81AB9C8FD006FFE5B /* ViewController.swift */,
+				777660521ABA55E8004E1C64 /* UserTableViewController.swift */,
 				771FDBBA1AB9C8FD006FFE5B /* Main.storyboard */,
 				771FDBBD1AB9C8FD006FFE5B /* Images.xcassets */,
 				771FDBBF1AB9C8FD006FFE5B /* LaunchScreen.xib */,
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				771FDBB91AB9C8FD006FFE5B /* ViewController.swift in Sources */,
+				777660531ABA55E8004E1C64 /* UserTableViewController.swift in Sources */,
 				771FDBB71AB9C8FD006FFE5B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +482,7 @@
 				771FDBD21AB9C8FD006FFE5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		771FDBD31AB9C8FD006FFE5B /* Build configuration list for PBXNativeTarget "SnapchatTests" */ = {
 			isa = XCConfigurationList;
@@ -486,6 +491,7 @@
 				771FDBD51AB9C8FD006FFE5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
