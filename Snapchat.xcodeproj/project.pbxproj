@@ -28,6 +28,7 @@
 		771FDBF21AB9CBAF006FFE5B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 771FDBF11AB9CBAF006FFE5B /* libz.dylib */; };
 		771FDBF41AB9CBB8006FFE5B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 771FDBF31AB9CBB8006FFE5B /* libsqlite3.dylib */; };
 		777660531ABA55E8004E1C64 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777660521ABA55E8004E1C64 /* UserTableViewController.swift */; };
+		777660551ABA850F004E1C64 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 777660541ABA850F004E1C64 /* ParseUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		771FDBF11AB9CBAF006FFE5B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		771FDBF31AB9CBB8006FFE5B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		777660521ABA55E8004E1C64 /* UserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserTableViewController.swift; path = ../UserTableViewController.swift; sourceTree = "<group>"; };
+		777660541ABA850F004E1C64 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				771FDBE21AB9CB77006FFE5B /* CFNetwork.framework in Frameworks */,
 				771FDBE01AB9CB71006FFE5B /* AudioToolbox.framework in Frameworks */,
 				771FDBDD1AB9CAC0006FFE5B /* Parse.framework in Frameworks */,
+				777660551ABA850F004E1C64 /* ParseUI.framework in Frameworks */,
 				771FDBDC1AB9CAC0006FFE5B /* Bolts.framework in Frameworks */,
 				771FDBDE1AB9CAC0006FFE5B /* ParseFacebookUtils.framework in Frameworks */,
 			);
@@ -115,6 +118,7 @@
 				771FDBE31AB9CB7E006FFE5B /* CoreGraphics.framework */,
 				771FDBE11AB9CB77006FFE5B /* CFNetwork.framework */,
 				771FDBDF1AB9CB71006FFE5B /* AudioToolbox.framework */,
+				777660541ABA850F004E1C64 /* ParseUI.framework */,
 				771FDBB31AB9C8FD006FFE5B /* Snapchat */,
 				771FDBC91AB9C8FD006FFE5B /* SnapchatTests */,
 				771FDBB21AB9C8FD006FFE5B /* Products */,
@@ -404,6 +408,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Snapchat",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Snapchat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -421,6 +426,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Snapchat",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Snapchat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

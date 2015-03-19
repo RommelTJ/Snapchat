@@ -12,6 +12,7 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
 
     var userArray: [String] = []
     var activeRecipient = 0
+    var timer = NSTimer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,63 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
         for user in users {
             userArray.append(user.username)
             tableView.reloadData()
+        }
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("checkMessages"), userInfo: nil, repeats: true)
+    }
+    
+    func checkMessages() {
+        var query = PFQuery(className: "Image")
+        query.whereKey("recipientUsername", equalTo:PFUser.currentUser().username)
+        var images = query.findObjects()
+        
+        var done = false
+        for image in images {
+            if done == false {
+                var imageView:PFImageView = PFImageView()
+                imageView.file = image["photo"] as PFFile
+                //Download image
+                imageView.loadInBackground({ (photo, error) -> Void in
+                    if error == nil {
+                        var senderUsername = ""
+                        if image["senderUsername"] != nil {
+                            senderUsername = image["senderUsername"]! as String
+                        }
+
+                        var alert = UIAlertController(title: "You have a message!", message: "Message from \(senderUsername)", preferredStyle: .Alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+                            var backgroundImage = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
+                            backgroundImage.backgroundColor = UIColor.blackColor()
+                            backgroundImage.alpha = 0.9
+                            backgroundImage.tag = 3
+                            self.view.addSubview(backgroundImage)
+                            
+                            var displayedImage = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
+                            displayedImage.image = photo
+                            displayedImage.contentMode = UIViewContentMode.ScaleAspectFit
+                            displayedImage.tag = 3
+                            self.view.addSubview(displayedImage)
+                            
+                            //delete the image
+                            image.delete()
+                            
+                            self.timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("hideMessage"), userInfo: nil, repeats: false)
+                        }))
+                        
+                        self.presentViewController(alert, animated: true, completion: nil)
+                    }
+                })
+                done = true
+            }
+        }
+    }
+    
+    func hideMessage() {
+        //UIApplication.sharedApplication().endIgnoringInteractionEvents()
+        for subview in self.view.subviews {
+            if subview.tag == 3 {
+                subview.removeFromSuperview()
+            }
         }
     }
     
@@ -91,6 +149,7 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "logout" {
+            timer.invalidate()
             PFUser.logOut()
         }
     }
