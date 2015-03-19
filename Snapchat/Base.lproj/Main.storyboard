@@ -79,7 +79,13 @@
                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
-                                <navigationItem title="Snapchat Users" id="5EP-o8-Lo3"/>
+                                <navigationItem title="Snapchat Users" id="5EP-o8-Lo3">
+                                    <barButtonItem key="rightBarButtonItem" title="Logout" id="62r-Bm-WAU">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="logout" id="UOX-9s-sSR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
                             </items>
                         </navigationBar>
                         <prototypes>
