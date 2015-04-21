@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBAction func doLogin(sender: AnyObject) {
         //Try to log them in. If fail, sign them up.
         PFUser.logInWithUsernameInBackground(usernameTextField.text, password:"mypass") {
-            (user: PFUser!, error: NSError!) -> Void in
+            (user: PFUser?, error: NSError?) -> Void in
             if user != nil {
                 // Do stuff after successful login.
                 NSLog("Successful login!")
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
                 user.password = "mypass"
                 
                 user.signUpInBackgroundWithBlock {
-                    (succeeded: Bool!, error: NSError!) -> Void in
+                    (succeeded: Bool, error: NSError?) -> Void in
                     if error == nil {
                         // Hooray! Let them use the app now.
                         NSLog("Sign up successful!")

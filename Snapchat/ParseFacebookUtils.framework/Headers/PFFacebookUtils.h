@@ -9,6 +9,7 @@
 #import <FacebookSDK/FacebookSDK.h>
 
 #import <Parse/PFConstants.h>
+#import <Parse/PFNullability.h>
 #import <Parse/PFUser.h>
 
 PF_ASSUME_NONNULL_BEGIN
@@ -86,6 +87,28 @@ PF_ASSUME_NONNULL_BEGIN
  @returns `YES` if the user has their account linked to Facebook, otherwise `NO`.
  */
 + (BOOL)isLinkedWithUser:(PFUser *)user;
+
+///--------------------------------------
+/// @name Customizing Login Behavior
+///--------------------------------------
+
+/*!
+ @abstract Sets the default login behavior to be used when logging in or linking users with Facebook.
+
+ @discussion Default is to allow Facebook Login, with fallback to Inline Facebook Login.
+
+ @param behavior The behavior to set.
+ */
++ (void)setFacebookLoginBehavior:(FBSessionLoginBehavior)behavior;
+
+/*!
+ @abstract Login behavior controls whether to allow, force or prohibit Facebook Login or Inline Facebook Login.
+
+ @discussion Default is to allow Facebook Login, with fallback to Inline Facebook Login.
+
+ @returns The login behavior currently set.
+ */
++ (FBSessionLoginBehavior)facebookLoginBehavior;
 
 ///--------------------------------------
 /// @name Logging In & Creating Facebook-Linked Users

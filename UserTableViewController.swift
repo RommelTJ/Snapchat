@@ -19,10 +19,10 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
 
         //Get list of users.
         var query = PFUser.query()
-        query.whereKey("username", notEqualTo:PFUser.currentUser().username)
-        var users = query.findObjects()
-        for user in users {
-            userArray.append(user.username)
+        query!.whereKey("username", notEqualTo:PFUser.currentUser()!.username!)
+        var users = query!.findObjects()
+        for user in users! {
+            userArray.append((user.username)!!)
             tableView.reloadData()
         }
         
@@ -31,20 +31,20 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
     
     func checkMessages() {
         var query = PFQuery(className: "Image")
-        query.whereKey("recipientUsername", equalTo:PFUser.currentUser().username)
+        query.whereKey("recipientUsername", equalTo:PFUser.currentUser()!.username!)
         var images = query.findObjects()
         
         var done = false
-        for image in images {
+        for image in images! {
             if done == false {
                 var imageView:PFImageView = PFImageView()
-                imageView.file = image["photo"] as PFFile
+                imageView.file = image["photo"] as! PFFile
                 //Download image
                 imageView.loadInBackground({ (photo, error) -> Void in
                     if error == nil {
                         var senderUsername = ""
                         if image["senderUsername"] != nil {
-                            senderUsername = image["senderUsername"]! as String
+                            senderUsername = image["senderUsername"]! as! String
                         }
 
                         var alert = UIAlertController(title: "You have a message!", message: "Message from \(senderUsername)", preferredStyle: .Alert)
@@ -87,7 +87,7 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
     func pickImage(sender: AnyObject) {
         var image = UIImagePickerController()
         image.delegate = self
-        image.sourceType = UIImagePickerControllerSourceType.Camera
+        image.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         image.allowsEditing = true
         NSLog("About to present the image.")
         self.presentViewController(image, animated: true, completion: nil)
@@ -113,30 +113,30 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
 
         cell.textLabel?.text = userArray[indexPath.row]
 
         return cell
     }
 
-    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         self.dismissViewControllerAnimated(true, completion: nil)
         
         //Upload to Parse Code goes here.
         var imageToSend = PFObject(className:"Image")
         //imageToSend["image"] = UIImageJPEGRepresentation(image, 0.1111)
         imageToSend["photo"] = PFFile(name: "Image", data: UIImageJPEGRepresentation(image, 0.5))
-        imageToSend["senderUsername"] = PFUser.currentUser().username
+        imageToSend["senderUsername"] = PFUser.currentUser()!.username
         imageToSend["recipientUsername"] = userArray[activeRecipient]
         imageToSend.saveInBackgroundWithBlock {
-            (success: Bool, error: NSError!) -> Void in
+            (success: Bool, error: NSError?) -> Void in
             if (success) {
                 // The object has been saved.
                 NSLog("Image sent succesfully!")
             } else {
                 // There was a problem, check error.description
-                NSLog("ERROR: \(error.description)")
+                NSLog("ERROR: \(error!.description)")
             }
         }
         
