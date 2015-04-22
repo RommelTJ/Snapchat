@@ -44,6 +44,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
+        //Called every time we send an openParentApplication request from the Watch Extension.
+        if let message = userInfo as? [String:String] {
+            if let content = message["content"] {
+                if content == "isLoggedIn" {
+                    //RUN PARSE CODE for Apple Watch
+                    if PFUser.currentUser() != nil {
+                        //User is logged in
+                        reply(["loggedIn": "true"])
+                    } else {
+                        reply(["loggedIn": "false"])
+                    }
+                } else if content == "getMessages" {
+                    //RUN PARSE CODE for Apple Watch
+                    //Get list of users.
+                    var userArray = [String]()
+                    var query = PFUser.query()
+                    query!.whereKey("username", notEqualTo:PFUser.currentUser()!.username!)
+                    var users = query!.findObjects()
+                    for user in users! {
+                        userArray.append((user.username)!!)
+                    }
+                    reply(["messages": userArray])
+                } else {
+                    reply(["content": "What do you want?"])
+                }
+            }
+        }
+    }
 
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77004C001AE81C16002D694E /* TableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77004BFF1AE81C16002D694E /* TableRowController.swift */; };
 		771FDBB71AB9C8FD006FFE5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771FDBB61AB9C8FD006FFE5B /* AppDelegate.swift */; };
 		771FDBB91AB9C8FD006FFE5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771FDBB81AB9C8FD006FFE5B /* ViewController.swift */; };
 		771FDBBC1AB9C8FD006FFE5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 771FDBBA1AB9C8FD006FFE5B /* Main.storyboard */; };
@@ -28,6 +29,13 @@
 		7762F15D1AE6CA08004513AB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7762F15A1AE6CA08004513AB /* Parse.framework */; };
 		7762F15E1AE6CA08004513AB /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7762F15B1AE6CA08004513AB /* ParseFacebookUtils.framework */; };
 		7762F1601AE6CA20004513AB /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7762F15F1AE6CA20004513AB /* ParseUI.framework */; };
+		7762F16B1AE6DE61004513AB /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7762F16A1AE6DE61004513AB /* InterfaceController.swift */; };
+		7762F16D1AE6DE61004513AB /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7762F16C1AE6DE61004513AB /* NotificationController.swift */; };
+		7762F16F1AE6DE61004513AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7762F16E1AE6DE61004513AB /* Images.xcassets */; };
+		7762F1731AE6DE61004513AB /* Snapchat WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 7762F1721AE6DE61004513AB /* Snapchat WatchKit App.app */; };
+		7762F17B1AE6DE61004513AB /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7762F1791AE6DE61004513AB /* Interface.storyboard */; };
+		7762F17D1AE6DE61004513AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7762F17C1AE6DE61004513AB /* Images.xcassets */; };
+		7762F1811AE6DE61004513AB /* Snapchat WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7762F1651AE6DE61004513AB /* Snapchat WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		777660531ABA55E8004E1C64 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777660521ABA55E8004E1C64 /* UserTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,9 +47,38 @@
 			remoteGlobalIDString = 771FDBB01AB9C8FD006FFE5B;
 			remoteInfo = Snapchat;
 		};
+		7762F1741AE6DE61004513AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 771FDBA91AB9C8FD006FFE5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7762F1711AE6DE61004513AB;
+			remoteInfo = "Snapchat WatchKit App";
+		};
+		7762F17E1AE6DE61004513AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 771FDBA91AB9C8FD006FFE5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7762F1641AE6DE61004513AB;
+			remoteInfo = "Snapchat WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7762F1801AE6DE61004513AB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7762F1811AE6DE61004513AB /* Snapchat WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		77004BFF1AE81C16002D694E /* TableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRowController.swift; sourceTree = "<group>"; };
 		771FDBB11AB9C8FD006FFE5B /* Snapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		771FDBB51AB9C8FD006FFE5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		771FDBB61AB9C8FD006FFE5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +105,16 @@
 		7762F15A1AE6CA08004513AB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		7762F15B1AE6CA08004513AB /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		7762F15F1AE6CA20004513AB /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		7762F1651AE6DE61004513AB /* Snapchat WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Snapchat WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7762F1681AE6DE61004513AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7762F1691AE6DE61004513AB /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		7762F16A1AE6DE61004513AB /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		7762F16C1AE6DE61004513AB /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		7762F16E1AE6DE61004513AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7762F1721AE6DE61004513AB /* Snapchat WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Snapchat WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7762F1781AE6DE61004513AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7762F17A1AE6DE61004513AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		7762F17C1AE6DE61004513AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		777660521ABA55E8004E1C64 /* UserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserTableViewController.swift; path = ../UserTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +148,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7762F1621AE6DE61004513AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -121,6 +175,8 @@
 				7762F15F1AE6CA20004513AB /* ParseUI.framework */,
 				771FDBB31AB9C8FD006FFE5B /* Snapchat */,
 				771FDBC91AB9C8FD006FFE5B /* SnapchatTests */,
+				7762F1661AE6DE61004513AB /* Snapchat WatchKit Extension */,
+				7762F1761AE6DE61004513AB /* Snapchat WatchKit App */,
 				771FDBB21AB9C8FD006FFE5B /* Products */,
 				771FDBD61AB9C95C006FFE5B /* Snapchat-Bridging-Header.h */,
 			);
@@ -131,6 +187,8 @@
 			children = (
 				771FDBB11AB9C8FD006FFE5B /* Snapchat.app */,
 				771FDBC61AB9C8FD006FFE5B /* SnapchatTests.xctest */,
+				7762F1651AE6DE61004513AB /* Snapchat WatchKit Extension.appex */,
+				7762F1721AE6DE61004513AB /* Snapchat WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,6 +235,45 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7762F1661AE6DE61004513AB /* Snapchat WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7762F16A1AE6DE61004513AB /* InterfaceController.swift */,
+				7762F16C1AE6DE61004513AB /* NotificationController.swift */,
+				77004BFF1AE81C16002D694E /* TableRowController.swift */,
+				7762F16E1AE6DE61004513AB /* Images.xcassets */,
+				7762F1671AE6DE61004513AB /* Supporting Files */,
+			);
+			path = "Snapchat WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		7762F1671AE6DE61004513AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7762F1681AE6DE61004513AB /* Info.plist */,
+				7762F1691AE6DE61004513AB /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7762F1761AE6DE61004513AB /* Snapchat WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				7762F1791AE6DE61004513AB /* Interface.storyboard */,
+				7762F17C1AE6DE61004513AB /* Images.xcassets */,
+				7762F1771AE6DE61004513AB /* Supporting Files */,
+			);
+			path = "Snapchat WatchKit App";
+			sourceTree = "<group>";
+		};
+		7762F1771AE6DE61004513AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7762F1781AE6DE61004513AB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,10 +284,12 @@
 				771FDBAD1AB9C8FD006FFE5B /* Sources */,
 				771FDBAE1AB9C8FD006FFE5B /* Frameworks */,
 				771FDBAF1AB9C8FD006FFE5B /* Resources */,
+				7762F1801AE6DE61004513AB /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7762F17F1AE6DE61004513AB /* PBXTargetDependency */,
 			);
 			name = Snapchat;
 			productName = Snapchat;
@@ -215,6 +314,39 @@
 			productReference = 771FDBC61AB9C8FD006FFE5B /* SnapchatTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		7762F1641AE6DE61004513AB /* Snapchat WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7762F1851AE6DE61004513AB /* Build configuration list for PBXNativeTarget "Snapchat WatchKit Extension" */;
+			buildPhases = (
+				7762F1611AE6DE61004513AB /* Sources */,
+				7762F1621AE6DE61004513AB /* Frameworks */,
+				7762F1631AE6DE61004513AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7762F1751AE6DE61004513AB /* PBXTargetDependency */,
+			);
+			name = "Snapchat WatchKit Extension";
+			productName = "Snapchat WatchKit Extension";
+			productReference = 7762F1651AE6DE61004513AB /* Snapchat WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		7762F1711AE6DE61004513AB /* Snapchat WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7762F1821AE6DE61004513AB /* Build configuration list for PBXNativeTarget "Snapchat WatchKit App" */;
+			buildPhases = (
+				7762F1701AE6DE61004513AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Snapchat WatchKit App";
+			productName = "Snapchat WatchKit App";
+			productReference = 7762F1721AE6DE61004513AB /* Snapchat WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -230,6 +362,12 @@
 					771FDBC51AB9C8FD006FFE5B = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 771FDBB01AB9C8FD006FFE5B;
+					};
+					7762F1641AE6DE61004513AB = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					7762F1711AE6DE61004513AB = {
+						CreatedOnToolsVersion = 6.3;
 					};
 				};
 			};
@@ -248,6 +386,8 @@
 			targets = (
 				771FDBB01AB9C8FD006FFE5B /* Snapchat */,
 				771FDBC51AB9C8FD006FFE5B /* SnapchatTests */,
+				7762F1641AE6DE61004513AB /* Snapchat WatchKit Extension */,
+				7762F1711AE6DE61004513AB /* Snapchat WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -267,6 +407,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7762F1631AE6DE61004513AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7762F1731AE6DE61004513AB /* Snapchat WatchKit App.app in Resources */,
+				7762F16F1AE6DE61004513AB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7762F1701AE6DE61004513AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7762F17B1AE6DE61004513AB /* Interface.storyboard in Resources */,
+				7762F17D1AE6DE61004513AB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +449,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7762F1611AE6DE61004513AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7762F16D1AE6DE61004513AB /* NotificationController.swift in Sources */,
+				77004C001AE81C16002D694E /* TableRowController.swift in Sources */,
+				7762F16B1AE6DE61004513AB /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -298,6 +466,16 @@
 			isa = PBXTargetDependency;
 			target = 771FDBB01AB9C8FD006FFE5B /* Snapchat */;
 			targetProxy = 771FDBC71AB9C8FD006FFE5B /* PBXContainerItemProxy */;
+		};
+		7762F1751AE6DE61004513AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7762F1711AE6DE61004513AB /* Snapchat WatchKit App */;
+			targetProxy = 7762F1741AE6DE61004513AB /* PBXContainerItemProxy */;
+		};
+		7762F17F1AE6DE61004513AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7762F1641AE6DE61004513AB /* Snapchat WatchKit Extension */;
+			targetProxy = 7762F17E1AE6DE61004513AB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -316,6 +494,14 @@
 				771FDBC01AB9C8FD006FFE5B /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		7762F1791AE6DE61004513AB /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7762F17A1AE6DE61004513AB /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -469,6 +655,72 @@
 			};
 			name = Release;
 		};
+		7762F1831AE6DE61004513AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Snapchat_WatchKit_Extension;
+				INFOPLIST_FILE = "Snapchat WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		7762F1841AE6DE61004513AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = Snapchat_WatchKit_Extension;
+				INFOPLIST_FILE = "Snapchat WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		7762F1861AE6DE61004513AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Snapchat WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7762F1871AE6DE61004513AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Snapchat WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -495,6 +747,24 @@
 			buildConfigurations = (
 				771FDBD41AB9C8FD006FFE5B /* Debug */,
 				771FDBD51AB9C8FD006FFE5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7762F1821AE6DE61004513AB /* Build configuration list for PBXNativeTarget "Snapchat WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7762F1831AE6DE61004513AB /* Debug */,
+				7762F1841AE6DE61004513AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7762F1851AE6DE61004513AB /* Build configuration list for PBXNativeTarget "Snapchat WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7762F1861AE6DE61004513AB /* Debug */,
+				7762F1871AE6DE61004513AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

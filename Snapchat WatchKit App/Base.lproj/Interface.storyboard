@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14C1514" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Snapchat_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="1" alignment="center" verticalAlignment="center" hidden="YES" text="Please log in on your iPhone" textAlignment="center" numberOfLines="2" id="8Ih-db-CWJ"/>
+                        <table alignment="left" hidden="YES" id="REG-as-YaW">
+                            <items>
+                                <tableRow identifier="TableRowController" id="dxS-RO-aVm" customClass="TableRowController" customModule="Snapchat_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="7Du-mJ-jsO">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" text="Label" id="dBc-Xw-5ep"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="tableRowLabel" destination="dBc-Xw-5ep" id="Lja-ph-JxY"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="loginMessage" destination="8Ih-db-CWJ" id="n3b-3h-au8"/>
+                        <outlet property="table" destination="REG-as-YaW" id="Xeu-Ir-1nI"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Snapchat_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
